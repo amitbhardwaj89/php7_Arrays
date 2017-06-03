@@ -60,3 +60,26 @@
 $arr_num = [1,2,3,4,5];
     $ret_map = array_map($func,$arr_num);
 print_r($ret_map);
+/*
+ * 3May 2017
+ * array_merge_recursive function is used to merge two or more given arrays (it appends the second array to the first array)
+ */
+$array1 = ['fname'=>'Amit','lname'=>'Bhardwaj'];
+$array2 = ['roll'=>'64','lname'=>'Bh'];
+$ret_rmerge = array_merge_recursive($array1,$array2);
+print_r($ret_rmerge);
+$array3 = [1,2,3];
+$array4 = [3,5,6];
+$ret_merge = array_merge($array3,$array4);
+print_r($ret_merge);
+$arr_sort = [100,80,45,57,68,36];
+/*
+ * array_multisort function is used to sort array in ascending or descending order (first argument is array and second is the order.
+ */
+$i = array_multisort($arr_sort,SORT_ASC);
+print_r($arr_sort);
+/*
+ * array_pad function is used to pad the given array with specified value (number of padded element is find by Size minus size of array)
+ */
+$arr_pad = array_pad($arr_sort,6,0);
+print_r($arr_pad);
